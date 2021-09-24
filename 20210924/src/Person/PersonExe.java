@@ -6,12 +6,12 @@ public class PersonExe {
 
 	private PersonExe() {
 		persons = new Person[100];
-		persons[0] = new Person("È«±æµ¿",Gender.MAN,"111-222");
-		persons[1] = new Person("±è°¡³ª",Gender.MAN,"121-222");
-		persons[2] = new Student("ÃÖÃ¶¼ö",Gender.MAN,"133-442","°æºÏ´ë");
-		persons[3] = new Student("±è¿µÈñ",Gender.WOMAN,"144-222","¿µ³²´ë");
-		persons[4] = new Worker("±è±æµ¿",Gender.WOMAN,"141-222","»ï¼º");
-		persons[5] = new Worker("ÀÌ°¡³ª",Gender.WOMAN,"121-222","¿¤Áö");
+//		persons[0] = new Person("È«±æµ¿",Gender.MAN,"111-222");
+//		persons[1] = new Person("±è°¡³ª",Gender.MAN,"121-222");
+//		persons[2] = new Student("ÃÖÃ¶¼ö",Gender.MAN,"133-442","°æºÏ´ë");
+//		persons[3] = new Student("±è¿µÈñ",Gender.WOMAN,"144-222","¿µ³²´ë");
+//		persons[4] = new Worker("±è±æµ¿",Gender.WOMAN,"141-222","»ï¼º");
+//		persons[5] = new Worker("ÀÌ°¡³ª",Gender.WOMAN,"121-222","¿¤Áö");
 		
 	}
 
