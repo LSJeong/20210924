@@ -6,12 +6,12 @@ public class PersonExe {
 
 	private PersonExe() {
 		persons = new Person[100];
-//		persons[0] = new Person("홍길동",Gender.MAN,"111-222");
-//		persons[1] = new Person("김가나",Gender.MAN,"121-222");
-//		persons[2] = new Student("최철수",Gender.MAN,"133-442","경북대");
-//		persons[3] = new Student("김영희",Gender.WOMAN,"144-222","영남대");
-//		persons[4] = new Worker("김길동",Gender.WOMAN,"141-222","삼성");
-//		persons[5] = new Worker("이가나",Gender.WOMAN,"121-222","엘지");
+		persons[0] = new Person("홍길동",Gender.MAN,"111-222");
+		persons[1] = new Person("김가나",Gender.MAN,"121-222");
+		persons[2] = new Student("최철수",Gender.MAN,"133-442","경북대");
+		persons[3] = new Student("김영희",Gender.WOMAN,"144-222","영남대");
+		persons[4] = new Worker("김길동",Gender.WOMAN,"141-222","삼성");
+		persons[5] = new Worker("이가나",Gender.WOMAN,"121-222","엘지");
 		
 	}
 
@@ -51,13 +51,13 @@ public class PersonExe {
 
 		if (choice == 1 || choice == 2 || choice == 3) {
 			String name = ScanUtil.readStr("이름을 입력하세요>>");
-			String gender = ScanUtil.readStr("성별을 입력하세요(남 or 여)>>");
+			String gender = ScanUtil.readStr("성별을 입력하세요[남 / 여]>>");
 			while(true) {
 				if(gender.equals("남") || gender.equals("여")) {
 					break;
 				}else
 					System.out.println("[남 / 여] 둘 중 하나를 입력해주세요!!");
-					gender = ScanUtil.readStr("성별을 입력하세요(남 or 여)>>");
+					gender = ScanUtil.readStr("성별을 입력하세요[남 / 여]>>");
 			}
 			
 			String phone = ScanUtil.readStr("연락처를 입력하세요>>");
@@ -90,13 +90,13 @@ public class PersonExe {
 	public void showList() {  // 조회
 		System.out.println("==조회메뉴입니다.==");
 		String search = ScanUtil.readStr("조회할 이름을 입력하세요[모를시 Enter.]>>");
-		String search2 = ScanUtil.readStr("조회할 성별을 입력하세요(남 or 여)[모를시 Enter.]>>");
+		String search2 = ScanUtil.readStr("조회할 성별을 입력하세요[남 / 여][모를시 Enter.]>>");
 		while(true) {
 			if(search2.equals("남") || search2.equals("여")|| search2.equals("")) {
 				break;
 			}else
-				System.out.println("남 or 여를 입력해주세요!!");
-			search2 = ScanUtil.readStr("성별을 입력하세요(남 or 여)>>");
+				System.out.println("잘못 입력했습니다.");
+				search2 = ScanUtil.readStr("조회할 성별을 입력하세요[남 / 여][모를시 Enter.]>>");
 		}
 		Gender gender1 = selGender(search2);
 
@@ -126,13 +126,13 @@ public class PersonExe {
 		System.out.println("==수정메뉴입니다.==");
 
 		String name = ScanUtil.readStr("수정할 친구 이름을 입력>>");
-		String gender = ScanUtil.readStr("변경할 성별을 입력(남 or 여)[변경없을시 Enter.]>>");
+		String gender = ScanUtil.readStr("변경할 성별을 입력[남 / 여][변경없을시 Enter.]>>");
 		while(true) {
 			if(gender.equals("남") || gender.equals("여")|| gender.equals("")) {
 				break;
 			}else
-				System.out.println("남 or 여를 입력해주세요!!");
-				gender = ScanUtil.readStr("성별을 입력하세요(남 or 여)>>");
+				System.out.println("잘못 입력했습니다.");
+				gender = ScanUtil.readStr("변경할 성별을 입력[남 / 여][변경없을시 Enter.]>>");
 		}
 		String phone = ScanUtil.readStr("변경할 연락처를 입력[변경없을시 Enter.]>>");
 		
