@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ScanUtil {
 	static Scanner scn = new Scanner(System.in);
+	
 	public static int readInt(String msg) {
 		System.out.println(msg);
 		int result = 0;
@@ -18,6 +19,7 @@ public class ScanUtil {
 		}
 		return result;
 	}
+	
 	
 	public static String readStr(String msg) {
 		System.out.println(msg);
